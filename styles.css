@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
 
 :root{
     /* FONT SIZE */
@@ -24,10 +24,11 @@
     --letter-spacing-tight: -0.02em;
 
     /* FONT FAMILY */
-    --font-family: 'Poppins', sans-serif;
+    --font-family: 'Hedvig Letters Serif', serif;
 
     /* COLORS */
-    --primary-base: #F1FAFF;
+    --primary-base: #E7E7E1;
+    --base-2       :  #F8F8F3;  
     --blue-text:    #002E64;
     --grey-base:    #495057;
     --white:        #fcffff;
@@ -58,7 +59,7 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-normal);
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tight);
     color: var(--grey-base);
@@ -153,10 +154,11 @@ button, input, textarea {
 
 .btn{
     padding: 1rem 2rem;
-    border-radius: 1rem;
+    border-radius: 0.6rem;
     letter-spacing: 0.3rem;
-    font-weight: var(--font-weight-bold);
-    border: 2px solid var(--black);
+    font-weight: var(--font-weight-normal);
+    background-color: var(--base-2);
+    /* border: 2px solid var(--black); */
     transition: 0.5s;
 }
 
@@ -172,11 +174,47 @@ button, input, textarea {
 
 /* ------------sections------------- */
 
+/* -----------nav-bar---------------- */
+
+ header{
+    margin-top: 0.5px;
+    position: fixed;
+    top: 0;
+    z-index: 100;;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: var(--primary-base);
+    border-bottom: 1px solid rgb(73 80 87 / 0.2);
+    
+    /* filter: drop-shadow(0 0 1rem var(--primary-base)); */
+    /* opacity: 0.98; */
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    background-color: var(--primary-base);
+    position: relative;
+    z-index: 10;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+/* ---------------hero-------------- */
+
 .hero{
     margin-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
     gap: 3rem;
 }
 
